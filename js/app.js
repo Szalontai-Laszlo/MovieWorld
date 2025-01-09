@@ -20,27 +20,42 @@
           '': {
             templateUrl: './html/root.html'
           },
+
           'header@root': {
             templateUrl: './html/header.html'
           },
+
           'footer@root': {
             templateUrl: './html/footer.html'
           }
         }
       })
-			.state('add', {
-				url: '/add',
+			.state('home', {
+				url: '/home',
         parent: 'root',
-				template: '<h1 class="text-center mt-5 display-1">Állatat felvétele</h1>'
+				templateUrl: './html/home.html'
 			})
-      .state('list', {
-				url: '/list',
+      .state('page1', {
+				url: '/page1',
         parent: 'root',
-				template: '<h1 class="text-center mt-5 display-1">Állatok megjelenítése</h1>'
+				templateUrl: './html/page1.html'
+			})
+
+      .state('page2', {
+				url: '/page2',
+        parent: 'root',
+				templateUrl: './html/page2.html'
+			})
+
+      .state('page3', {
+				url: '/page3',
+        parent: 'root',
+				templateUrl: './html/page3.html'
 			});
+
       
-      $urlRouterProvider.otherwise('/add');
-    }
-  ]);
+      $urlRouterProvider.otherwise('/home');
+    },
+  ])
 	
 })(window, angular);

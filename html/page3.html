@@ -1,111 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MovieWorld</title>
-	<link rel="shortcut icon" type="image/x-icon" href="../image/logo.png">
-	<link rel="stylesheet" href="../css/all.css">
-
-	<!-- Application components -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
-		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-		crossorigin="anonymous" referrerpolicy="no-referrer">
-	<link rel="stylesheet" href="../css/register.css">
-
-</head>
-
-<body class="menu-bar">
-
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-sm menu-bar">
-
-		<!-- Container -->
-		<div class="container-fluid">
-
-			<!-- Title -->
-			<a class="navbar-brand fs-6 fw-bold fst-italic text-light px-2" href="../index.html">
-				<span class="fs-5 me-1 letter-spacing-3">MovieWorld</span>
-			</a>
-
-			<!-- Hamburger icon -->
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!-- Menu -->
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav ms-auto mt-2 mt-sm-0">
-
-					<!-- Menu item dropdown -->
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-							aria-expanded="false">
-							Dropdown
-						</a>
-						<ul class="dropdown-menu bg-dark">
-							<li>
-								<a class="dropdown-item text-light" href="#" data-bs-toggle="modal"
-									data-bs-target="#my-modal-1">
-									Lorem-1
-								</a>
-							</li>
-							<li>
-								<a class="dropdown-item text-light" href="#" data-bs-toggle="modal"
-									data-bs-target="#my-modal-1">
-									Lorem-2
-								</a>
-							</li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li>
-								<a class="dropdown-item text-light" href="#" data-bs-toggle="modal"
-									data-bs-target="#my-modal-1">
-									Lorem-3
-								</a>
-							</li>
-						</ul>
-					</li>
-
-					<!-- Menu item -->
-					<li class="nav-item px-2">
-						<a class="nav-link text-light" href="../index.html">
-							<i class="fa-solid fa-house fs-5 me-1"></i>
-							<span>Home</span>
-						</a>
-					</li>
-
-					<!-- Menu item -->
-					<li class="nav-item px-2">
-						<a class="nav-link text-light" href="./page1.html">
-							<i class="fa-solid fa-users fs-5 me-1"></i>
-							<span>Page1</span>
-						</a>
-					</li>
-
-					<!-- Menu item -->
-					<li class="nav-item px-2">
-						<a class="nav-link text-light" href="./page3.html">
-							<i class="fa-solid fa-cart-shopping fs-5 me-1"></i>
-							<span>Bejelentkezés</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container" id="formContainer">
+	<div class="container mt-5 register-custom" id="formContainer">
 		<div class="row justify-content-center">
 			<div class="col-md-6">
-				<div class="card shadow">
-					<div class="card-header text-center">
+				<div class="card-register shadow register-bar border rounded w-auto	">
+					<div class="card-header text-center border rounded w-auto">
 						<h3 id="formTitle">Bejelentkezés</h3>
 					</div>
-					<div class="card-body">
+					<div class="card-body ">
 						<!-- Login Form -->
 						<form id="loginForm">
 							<div class="mb-3">
@@ -120,7 +20,7 @@
 							</div>
 							<button type="submit" class="btn btn-primary w-100">Bejelentkezés</button>
 						</form>
-
+						
 						<!-- Register Form (elrejtve) -->
 						<form id="registerForm" class="d-none">
 							<div class="mb-3">
@@ -172,112 +72,15 @@
 				</div>
 			</div>
 		</div>
+		<button class="register-button mb-5" onclick="toggleForms()" id="toggleButton">Regisztráció</button>
+
 	</div>
 
 	<!-- Regisztráció gomb -->
-	<button class="register-button" onclick="toggleForms()" id="toggleButton">Regisztráció</button>
 
-
-	<!-- Application components -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script>
-		function toggleCheckbox(selectedId) {
-			// Az ellenőrzés, hogy csak egy checkbox legyen kijelölve
-			let checkboxes = document.querySelectorAll("input[name='age']");
-			checkboxes.forEach(checkbox => {
-				if (checkbox.id !== selectedId) {
-					checkbox.checked = false;
-				}
-			});
-		}
-
-		function toggleForms() {
-			let loginForm = document.getElementById('loginForm');
-			let registerForm = document.getElementById('registerForm');
-			let formTitle = document.getElementById('formTitle');
-			let toggleButton = document.getElementById('toggleButton');
-
-			if (loginForm.classList.contains('d-none')) {
-				loginForm.classList.remove('d-none');
-				registerForm.classList.add('d-none');
-				formTitle.textContent = 'Bejelentkezés';
-				toggleButton.textContent = 'Regisztráció';
-			} else {
-				loginForm.classList.add('d-none');
-				registerForm.classList.remove('d-none');
-				formTitle.textContent = 'Regisztráció';
-				toggleButton.textContent = 'Bejelentkezés';
-			}
-		}
-
-		document.getElementById('registerForm').addEventListener('input', function (event) {
-			validateForm();
+		let registerForm = document.getElementById('registerForm');
+		registerForm.addEventListener('input', function (event) {
+		  validateForm();
 		});
-
-		function validateForm() {
-			let email = document.getElementById('registerEmail').value;
-			let password = document.getElementById('registerPassword').value;
-			let confirmPassword = document.getElementById('confirmPassword').value;
-			let ageAbove18 = document.getElementById('ageAbove18').checked;
-			let ageBelow18 = document.getElementById('ageBelow18').checked;
-
-			let emailValid = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email);
-			let passwordValid = password.length >= 8;
-			let confirmPasswordValid = password === confirmPassword;
-			let ageValid = ageAbove18 || ageBelow18;
-
-			let submitButton = document.getElementById('registerSubmit');
-			let passwordError = document.getElementById('passwordError');
-			let confirmPasswordError = document.getElementById('confirmPasswordError');
-			let emailError = document.getElementById('emailError');
-			let ageError = document.getElementById('ageError');
-
-			// Ellenőrizzük a jelszót és a megerősítést
-			if (passwordValid && confirmPasswordValid) {
-				passwordError.textContent = '';
-				confirmPasswordError.textContent = '';
-			} else {
-				if (!passwordValid) {
-					passwordError.textContent = 'A jelszónak legalább 8 karakter hosszúnak kell lennie.';
-				}
-				if (!confirmPasswordValid) {
-					confirmPasswordError.textContent = 'A két jelszó nem egyezik.';
-				}
-			}
-
-			// Ellenőrizzük az email-t
-			if (!emailValid) {
-				emailError.textContent = 'Az email cím érvénytelen.';
-			} else {
-				emailError.textContent = '';
-			}
-
-			// Ellenőrizzük az életkor megerősítését
-			if (!ageValid) {
-				ageError.textContent = 'Kérjük, erősítse meg az életkorát.';
-			} else {
-				ageError.textContent = '';
-			}
-
-			// Aktiváljuk a gombot, ha minden valid
-			if (emailValid && passwordValid && confirmPasswordValid && ageValid) {
-				submitButton.disabled = false;
-			} else {
-				submitButton.disabled = true;
-			}
-		}
-
-		function togglePasswordVisibility() {
-			let passwordField = document.getElementById('registerPassword');
-			let confirmPasswordField = document.getElementById('confirmPassword');
-			let isChecked = document.getElementById('showPassword').checked;
-
-			// Jelszó megjelenítése vagy elrejtése
-			passwordField.type = isChecked ? 'text' : 'password';
-			confirmPasswordField.type = isChecked ? 'text' : 'password';
-		}
 	</script>
-</body>
-
-</html>
