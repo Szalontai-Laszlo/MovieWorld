@@ -1,8 +1,10 @@
-/* Oldal háttérszín átmenet */
 body {
     background-image: linear-gradient(-90deg, #000000, #03044b);
     color: white;
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Gombok módosítása */
@@ -19,28 +21,35 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Fehér szöveg a tabokon */
-.nav-link {
-    color: white !important;
-}
-
-/* Aktív tab kiemelése */
-.nav-link.active {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-    color: white !important;
-    border: none;
-}
-
-/* Placeholder szöveg színe */
-.form-control::placeholder {
-    color: #cccccc;
-}
-
 /* Fehér szöveg a címkéken és h3-on */
 .form-label,
 .form-check-label,
 h3 {
     color: white !important;
+}
+
+/* Regisztráció gomb stílusa */
+.register-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: #03044b;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Placeholder szöveg színe */
+.form-control::placeholder {
+    color: #cccccc;
 }
 
 /* Kártya áttetsző háttér */
@@ -49,6 +58,7 @@ h3 {
     border: none;
 }
 
-h3 {
-    color: white !important;
+.error-message {
+    color: #ff4d4d;
+    font-size: 0.9rem;
 }
