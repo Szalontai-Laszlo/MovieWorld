@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorem</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../image/letter-l.png">
+  <title>MovieWorld</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../image/logo.png">
+  <link rel="stylesheet" href="../css/all.css">
 
   <!-- Application components -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css"
 		  crossorigin="anonymous" referrerpolicy="no-referrer">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
 		  crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="../css/register.css">
   
 </head>
-<body style="background-color: #D0D0D8;">
+<body class="menu-bar">
 
   <!-- Navbar -->
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-md navbar-dark menu-bar">
 
 		<!-- Container -->
 		<div class="container-fluid">
 
 			<!-- Title -->
 			<a class="navbar-brand fs-6 fw-bold fst-italic text-light px-2"
-				 href="../home.html">
-				<span class="fs-5 me-1 letter-spacing-3">LOREM</span>
-				<span>ipsum dolor</span>
+				 href="../index.html">
+				<span class="fs-5 me-1 letter-spacing-3">MovieWorld</span>
 			</a>
 
 			<!-- Hamburger icon -->
@@ -103,27 +104,237 @@
 		</div>
 	</nav>
 
-	<!-- 1900 x 400 img -->
-	<div class="container-fluid">
-		<div class="row">
-			<img src="https://dummyimage.com/1900x400" 
-				 class="d-block w-100" 
-				 alt="img">
-		</div>
+  	<!-- Main -->
+		<main class="container position-relative">
+
+			<!-- Row -->
+			<div class="row h-100 justify-content-center align-items-center px-2 px-sm-0">
+
+				<!-- User panel -->
+				<div class="user-panel rounded-3 shadow scale-up border border-light
+										bg-white p-0 col-12 col-sm-11 col-lg-9 col-xl-8 col-xxl-6">
+
+					<!-- Header -->
+					<div class="user-panel-header bg-primary text-white mb-0 pt-2 pb-1 rounded-top-3">
+
+						<!-- Title -->
+						<h4 class="text-center">
+							<i class="fas fa-user me-2"></i>
+							<span class="text-capitalize">bejelentkezés</span>
+						</h4>
+					</div>
+
+					<!-- Body -->
+					<form class="user-panel-body overflow-auto border-top border-light pt-4 pb-3 px-3">
+
+						<!-- Email -->
+						<div class="row input-row mb-2">
+
+							<!-- Label -->
+							<label for="email" 
+										 class="col-form-label col-form-label-sm col-md-4 text-md-end fw-semibold">
+								<span class="fw-bold text-danger">*</span>
+								<i class="fa-solid fa-envelope me-1"></i>
+								<span class="text-capitalize">email</span>
+								<span>cím:</span>
+							</label>
+
+							<!-- Input email -->
+							<div class="col-11 col-md-7">
+								<input id="email" 
+											 type="email"
+											 placeholder="email cím"
+											 class="form-control form-control-sm input-email"
+											 spellcheck="false" 
+										 	 autocomplete="off" 
+										 	 required
+										 	 maxlength="50">
+							</div>
+
+							<!-- Check mark -->
+							<div class="col-1 pt-1">
+								<span class="check-mark ms-1 fw-bold text-success d-none">
+									&check;
+								</span>
+							</div>
+						</div>
+
+						<!-- Password -->
+						<div class="row input-row mb-0">
+
+							<!-- Label -->
+							<label for="password" 
+										 class="col-form-label col-form-label-sm col-md-4 text-md-end fw-semibold">
+								<span class="fw-bold text-danger">*</span>
+								<i class="fa-solid fa-key me-1"></i>
+								<span class="text-capitalize">jelszó:</span>
+							</label>
+
+							<!-- Input password -->
+							<div class="col-11 col-md-7">
+								<input id="password" 
+											 type="password"
+											 placeholder="jelszó"
+											 class="form-control form-control-sm input-password"
+											 spellcheck="false" 
+											 autocomplete="off" 
+											 required
+											 maxlength="20">
+							</div>
+
+							<!-- Check mark -->
+							<div class="col-1 pt-1">
+								<span class="check-mark ms-1 fw-bold text-success d-none">
+									&check;
+								</span>
+							</div>
+						</div>
+
+						<!-- Password rule -->
+						<div class="row mb-2">
+								<div class="col-0 col-sm-4"></div>
+								<div class="col-11 col-md-7">
+									<span class="text-muted fs-sm">
+										6-20 karakter (kis-nagy betűt, és számot tartalmaz).
+									</span>
+								</div>
+						</div>
+
+						<!-- Show/Hide password -->
+						<div class="row mb-2">
+							<div class="col-0 col-sm-4"></div>
+							<div class="col-11 col-md-7">
+								<div class="form-check form-check-inline small">
+									<input class="form-check-input" 
+												 type="checkbox"
+												 id="show-password">
+									<label class="form-check-label" 
+												 for="show-password">
+										<i class="fa-solid fa-eye mx-1"></i>
+										<span>jelszót megjelenít</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- Dividing line -->
+						<hr class="text-muted">
+
+						<!-- Test code content -->
+						<div class="row mb-2">
+							<div class="col-form-label col-md-4 text-md-end fw-semibold">
+								<span class="fw-bold text-danger">*</span>
+								<i class="fa-regular fa-hand-point-right fa-xl"></i>
+								<span class="ms-1 text-capitalize">kód:</span>
+							</div>
+							<div class="col-11 col-md-7 position-relative">
+								<span id="testcode_content"
+											class="text-start letter-spacing-2 fw-semibold fs-4">
+								</span>
+							</div>
+							<div class="col-1"></div>
+						</div>
+
+						<!-- Test code -->
+						<div class="row input-row">
+							<div class="col-form-label d-none d-sm-block col-sm-4"></div>
+							<div class="col-11 col-md-7 position-relative">
+								<div class="input-group input-group-sm">
+
+									<!-- Robot icon -->
+									<div class="input-group-prepend">
+  	            		<span class="input-group-text rounded-0 h-100">
+  	            			<i class="fas fa-robot"></i>
+  	            		</span>
+  	            	</div>
+
+									<!-- Input test code -->
+  	            	<input id="testcode"
+  	            	       type="text" 
+  	            				 class="form-control form-control-sm"
+  	            				 spellcheck="false" 
+  	            				 autocomplete="off"
+												 placeholder="kód"
+  	            				 required
+  	            				 maxlength="5"
+  	            				 style="min-width:120px!important;max-width:120px!important;">
+
+									<!-- Refresh button -->
+  	            	<div class="input-group-append">
+										<button type="button"
+														class="btn btn-sm btn-light text-capitalize 
+																	 text-small-caps btnClickEffect"
+														onclick="testCodeInit()">
+  	            			<i class="fas fa-sync-alt"></i>
+											<span class="ms-1">frissít</span>
+  	            		</button>
+  	            	</div>
+								</div>
+							</div>
+
+							<!-- Check mark -->
+							<div class="col-1 pt-1">
+								<span class="check-mark ms-1 fw-bold text-success d-none">
+									&check;
+								</span>
+							</div>
+						</div>
+					</form>
+
+					<!-- Footer -->
+					<div class="user-panel-footer pb-2 px-3 border-top rounded-bottom-3">
+
+						<!-- Buttons/Links -->
+						<div class="row mt-3">
+							
+							<!-- Column -->
+							<div class="col-12 clearfix">
+
+								<!-- Accept -->
+								<button id="accept"
+												type="button" 
+												class="btn btn-primary col-12 col-sm-auto 
+															 float-sm-start mx-sm-1 mb-1"
+												onclick="btnAcceptClicked()"
+												disabled>
+									<i class="fa-solid fa-right-to-bracket"></i>
+									<span class="ms-1 btn-content d-inline-block text-start text-capitalize">
+										bejelentkezés
+									</span>
+								</button>
+
+								<!-- Cancel -->
+								<a class="btn btn-secondary col-12 col-sm-auto  
+													float-sm-start mx-sm-1 mb-1" 
+									 href="home.html">
+									<i class="fa-solid fa-circle-xmark"></i>
+									<span class="ms-1 btn-content d-inline-block text-start text-capitalize">
+										mégsem
+									</span>
+								</a>
+
+								<!-- Dividing line -->
+								<hr class="text-muted d-sm-none">
+
+								<!-- Frogot password -->
+								<a class="btn btn-sm btn-outline-info col-12 col-sm-auto 
+													float-sm-end mx-sm-1 mb-1" 
+										href="register.html">
+									<i class="fa-solid fa-unlock-keyhole"></i>
+									<span class="ms-1 btn-content d-inline-block text-start">
+											<span class="text-capitalize">Regisztráció</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
 	</div>
 
-  	<!-- Container -->
-  	<div class="container">
-
-    	<!-- Row -->
-    	<div class="row mt-5 justify-content-center">
-
-			
-    	</div>
-  	</div>
-
 	<!-- Footer -->
-	<footer class="container-fluid bg-dark mt-3 pt-3">
+	<footer class="container-fluid menu-bar mt-3 pt-3">
 
 		<!-- School -->
 		<div class="row">

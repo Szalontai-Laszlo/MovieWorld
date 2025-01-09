@@ -1,0 +1,54 @@
+/* Oldal háttérszín átmenet */
+body {
+    background-image: linear-gradient(-90deg, #000000, #03044b);
+    color: white;
+    min-height: 100vh;
+}
+
+/* Gombok módosítása */
+.btn-primary,
+.btn-success {
+    background-color: white;
+    color: #03044b;
+    border: none;
+}
+
+/* Gomb hover effekt */
+.btn-primary:hover,
+.btn-success:hover {
+    background-color: #f0f0f0;
+}
+
+/* Fehér szöveg a tabokon */
+.nav-link {
+    color: white !important;
+}
+
+/* Aktív tab kiemelése */
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border: none;
+}
+
+/* Placeholder szöveg színe */
+.form-control::placeholder {
+    color: #cccccc;
+}
+
+/* Fehér szöveg a címkéken és h3-on */
+.form-label,
+.form-check-label,
+h3 {
+    color: white !important;
+}
+
+/* Kártya áttetsző háttér */
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+}
+
+h3 {
+    color: white !important;
+}
