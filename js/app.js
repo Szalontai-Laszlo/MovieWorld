@@ -47,13 +47,18 @@
 				templateUrl: './html/page2.html'
 			})
 
-      .state('page3', {
-				url: '/page3',
+      .state('login', {
+				url: '/login',
         parent: 'root',
-				templateUrl: './html/page3.html'
-			});
+				templateUrl: './html/login.html'
+			})
 
-      
+      .state('register', {
+				url: '/register',
+        parent: 'root',
+				templateUrl: './html/register.html'
+			});
+    
       $urlRouterProvider.otherwise('/home');
     },
   ])
