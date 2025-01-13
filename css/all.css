@@ -10,3 +10,7 @@
 .register-bar {
     background-image: linear-gradient(-90deg, #000000, #333355 );
 }
+
+.cursor-hover:hover{
+    cursor: pointer;
+}
