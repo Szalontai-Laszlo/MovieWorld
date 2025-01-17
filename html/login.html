@@ -1,4 +1,4 @@
-<div class="container border mt-5 w-auto register-bar rounded">
+<div class="container border mt-5 w-auto register-bar rounded text-white">
 	<div class="row justify-content-center w-auto">
 		<div class="col-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7">
 
@@ -18,27 +18,27 @@
 				<!-- Email -->
 				<div class="row mb-3 justify-content-center">
 					<label for="login-email" 
-								 class="col-form-label col-12 col-md-5 text-white w-auto">
+								 class="col-form-label col-12 col-md-5 text-md-end">
 						<span>Email:</span>
 					</label>
 					<div class="col-11 col-md-6 position-relative">
 						<input id="login-email"
-									 class="form-control"
-									 name="email" 
-									 type="text"
-									 placeholder="example: asd@asd.asd"
-									 spellcheck="false" 
-									 autocomplete="off" 
-									 required
-									 maxlength="50"
-									 ng-model="model.email"
-									 ng-pattern="/^([a-z0-9_.+-])+\@(([a-z0-9-])+\.)+([a-z0-9]{2,4})+$/"
-									 ng-disable-space
-									 ng-clear-icon>
+							   class="form-control"
+							   name="email" 
+							   type="text"
+							   placeholder="example: asd@asd.asd"
+							   spellcheck="false" 
+							   autocomplete="off" 
+							   required
+							   maxlength="50"
+							   ng-model="email"
+							   ng-pattern="/^([a-z0-9_.+-])+\@(([a-z0-9-])+\.)+([a-z0-9]{2,4})+$/"
+							   ng-disable-space
+							   ng-clear-icon>
 					</div>
 					<div class="col-1 d-flex align-items-center justify-content-start ps-1">
 						<span class="fw-bolder text-success"
-									ng-class="{'invisible': loginForm.email.$invalid}">
+							  ng-class="{'invisible': loginForm.email.$invalid}">
 							&check;
 						</span>
 					</div>
@@ -47,25 +47,25 @@
 				<!-- Password -->
 				<div class="row mb-2 justify-content-center">
 					<label for="login-password" 
-						     class="col-form-label col-12 col-md-5 w-auto">
+						   class="col-form-label col-12 col-md-5 text-md-end">
 						<span class="text-white">Jelszó:</span>
 					</label>
 					<div class="col-11 col-md-6 position-relative">
 						<input id="login-password"
-									class="form-control"
-									name="password" 
-									type="{{model.showPassword ? 'text' : 'password'}}"
-									placeholder="example: Abdc123"
-									spellcheck="false" 
-									autocomplete="off" 
-									required
-									minlength="6"
-									maxlength="20"
-									ng-init="model.password=null"
-									ng-model="model.password"
-									ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/"
-									ng-disable-space
-									ng-clear-icon>
+							   class="form-control"
+							   name="password" 
+							   type="{{showPassword ? 'text' : 'password'}}"
+							   placeholder="example: Abdc123"
+							   spellcheck="false" 
+							   autocomplete="off" 
+							   required
+							   minlength="6"
+							   maxlength="20"
+							   ng-init="password=null"
+							   ng-model="password"
+							   ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/"
+							   ng-disable-space
+							   ng-clear-icon>
 					</div>
 					<div class="col-1 d-flex align-items-center justify-content-start ps-1">
 						<span class="fw-bolder text-success"
@@ -73,25 +73,25 @@
 							&check;
 						</span>
 						<span data-bs-toggle="tooltip"
-									data-bs-custom-class="custom-tooltip"
-									data-bs-html="true"
-									data-bs-title="&lt;p class='my-1'>6-20 characters&lt;/br>
-																&lt;small>(contains uppercase, lowercase letters and numbers)&lt;/small>&lt;/p>">
+							  data-bs-custom-class="custom-tooltip"
+							  data-bs-html="true"
+							  data-bs-title="&lt;p class='my-1'>6-20 characters&lt;/br>
+											&lt;small>(contains uppercase, lowercase letters and numbers)&lt;/small>&lt;/p>">
 						</span>
 					</div>
 				</div>
 
 				<!-- Show/Hide password -->
-				<div class="row justify-content-center ms-4">
+				<div class="row justify-content-end">
 					<div class="col-12 col-md-7">
 						<input id="login-showPassword"
-									 class="form-check-input"
-									 type="checkbox"
-									 ng-init="model.showPassword=false"
-									 ng-model="model.showPassword">
+							   class="form-check-input"
+							   type="checkbox"
+							   ng-init="modal.showPassword=false"
+							   ng-model="modal.showPassword">
 						<label for="login-showPassword"
-									 class="form-check-label ms-1">
-							Show password
+							   class="form-check-label ms-1">
+							Jelszó megjelenítése
 						</label>
 						<div class="col-12 col-md-7 w-auto">
 							<p class="text-white">Nincs még fiókod? <a ui-sref="register">Hozz létre egyet!</a></p>
@@ -103,10 +103,10 @@
 				<!-- Login button -->
 				<div class="row justify-content-end mb-2">
 					<button type="button"
-									class="btn btn-primary w-auto px-5 me-3"
-									ng-disabled="loginForm.$invalid"
-									ng-click="console.log('Sikeres Bejelenkezés')">
-						Login
+							class="btn btn-primary w-auto px-5 me-3"
+							ng-disabled="loginForm.$invalid"
+							ng-click="login()">
+						Bejelentkezés
 					</button>
 				</div>
 			</form>

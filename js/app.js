@@ -3,13 +3,13 @@
   'use strict';
 
   // Application module
-	angular.module('app', [
+	const app = angular.module('app', [
 		'ui.router',
     'app.common'
-	])
+	]);
 
 	// Application config
-	.config([
+	app.config([
     '$stateProvider', 
     '$urlRouterProvider', 
     function($stateProvider, $urlRouterProvider) {
@@ -50,7 +50,8 @@
       .state('login', {
 				url: '/login',
         parent: 'root',
-				templateUrl: './html/login.html'
+				templateUrl: './html/login.html',
+        controller: 'loginController'
 			})
 
       .state('register', {
@@ -62,5 +63,11 @@
       $urlRouterProvider.otherwise('/home');
     },
   ])
+
+  app.controller('loginController', function($scope) {
+    $scope.login = function() {
+      console.log($scope.password + "\n" + $scope.email)
+    }
+  })
 	
 })(window, angular);
