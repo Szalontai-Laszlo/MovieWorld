@@ -50,17 +50,28 @@
       .state('login', {
 				url: '/login',
         parent: 'root',
+        controller: "login",
 				templateUrl: './html/login.html'
 			})
 
       .state('register', {
 				url: '/register',
         parent: 'root',
+        controller: 'register',
 				templateUrl: './html/register.html'
 			});
     
       $urlRouterProvider.otherwise('/home');
-    },
+    }
+    .controller('login', [
+      '$scope'
+    ])
+
+
+
+    .controller('register', [
+      
+    ] )
   ])
 	
 })(window, angular);
