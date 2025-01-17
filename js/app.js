@@ -57,11 +57,12 @@
       .state('register', {
 				url: '/register',
         parent: 'root',
+        controller: 'register',
 				templateUrl: './html/register.html'
 			});
     
       $urlRouterProvider.otherwise('/home');
-    },
+    }
   ])
 
   app.controller('loginController', function($scope) {
