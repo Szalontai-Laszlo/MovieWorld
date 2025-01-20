@@ -1,5 +1,5 @@
-.menu-bar {
-    background-image: linear-gradient(-90deg, #000000, #03044b );
+.orange-pink {
+    background: linear-gradient(45deg, #ff8a00, #e52e71);
 }
 
 .logo {
@@ -70,4 +70,8 @@ h3 {
 .error-message {
     color: #ff4d4d;
     font-size: 0.9rem;
+}
+
+.titles {
+    font-family: Cambria;
 }

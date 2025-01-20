@@ -1,17 +1,11 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-sm navbar-dark menu-bar border">
-
-  <!-- Container -->
+<nav class="navbar navbar-expand-lg orange-pink">
   <div class="container-fluid">
-
-    <!-- Title -->
-    <a class="navbar-brand fs-6 fw-bold fst-italic text-light px-2">
-      <span class="fs-5 me-1 letter-spacing-3 cursor-hover"
-      ui-sref="home"
-      ui-sref-active="active">Movie<span style="color: cyan;">World</span></span>
+    <a class="navbar-brand d-flex align-items-center" 
+       ui-sref="home"
+       ui-sref-active="active">
+      <span>MovieWorld</span>
     </a>
-
-    <!-- Hamburger icon -->
     <button class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
@@ -21,35 +15,26 @@
             aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mt-2 mt-sm-0 text-light">
-
-        <!-- Menu item -->
-        <li class="nav-item px-2 text-center">
-          <a class="nav-link border rounded text-light"
-          ui-sref="page1" 
-          ui-sref-active="active">
-            <span>Page1</span>
+    <div class="collapse navbar-collapse" 
+         id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link"
+             ui-sref="page2"
+             ui-sref-active="active">
+             | Filmek |
           </a>
         </li>
-
-        <!-- Menu item -->
-        <li class="nav-item px-2 text-center">
-          <a class="nav-link border rounded text-light"
-          ui-sref="page2" 
-          ui-sref-active="active">
-            <span>Film Galéria</span>
+        <li class="nav-item titles">
+          <a class="nav-link">
+             | Előadások |
           </a>
         </li>
-
-        <!-- Menu item -->
-        <li class="nav-item px-2 text-center">
-          <a class="nav-link border rounded text-light"
-          ui-sref="login" 
-          ui-sref-active="active">
-            <span>Bejelentkezés</span>
+        <li class="nav-item titles">
+          <a class="nav-link"
+             ui-sref="register"
+             ui-sref-active="active">
+             | Bejelentkezés |
           </a>
         </li>
       </ul>

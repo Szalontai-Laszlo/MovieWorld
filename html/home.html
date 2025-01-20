@@ -1,126 +1,51 @@
 <!-- Container -->
-<div class="container">
+<div class="container-fluid">
 
-    <!-- Row -->
-    <div class="row mt-3">
+  <!-- Row -->
+  <div class="row">
+    <div class="text-center text-white" style="background-color: #333; padding: 100px 20px;">
+      <h1 class="display-4" style="font-family: serif;">MovieWorld</h1>
+      <p class="lead" style="font-family: serif;">Ahol a filmek valósággá válnak!</p>
     </div>
-
-    <!-- Section -->
-    <section class="text-center text-dark">
-
-        <!-- Title -->
-        <h3 class="fst-bold display-6 text-white">
-            Üdvözlünk az oldalon!
-        </h3>
-        <h4 class="fst-italic text-white">"Ahol a filmek valósággá válnak!"</h4>
-        
-        <!-- Content -->
-        <div class="row mt-5">
-            <hr>
-            <h4 class="text-white">Ajánlott filmek</h4>
-            <hr>
-        </div>
-
-        <!-- Carousel -->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <img src="./image/halalosiramban.png" class="d-block w-100 img-fluid" alt="Fast & Furious 8 poster">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Fast & Furious 8</h5>
-                        <p>Akció Film</p>
-                    </div>
-                </div>
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <img src="./image/avatar.png" class="d-block w-100 img-fluid" alt="Avatar: A víz útja poster">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Avatar: A víz útja</h5>
-                        <p>Sci-Fi, Akció Film</p>
-                    </div>
-                </div>
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <img src="./image/sonic2.png" class="d-block w-100 img-fluid" alt="Sonic 2 poster">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Sonic 2</h5>
-                        <p>Gyerek, Akció Film</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Carousel Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Előző</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Következő</span>
-            </button>
-        </div>
-        <hr>
-
-        <!-- Movie Cards -->
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-6 mb-3">
-                <div class="card bg-dark text-white">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="./image/kicsifaf.png" class="img-fluid rounded-start" alt="Fast & Furious 8 small poster">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Fast & Furious 8</h5>
-                                <p class="card-text">
-                                    Dominic Toretto hátat fordít a családjának, miközben Cipher zsarolásával bűncselekményekre kényszerítik,
-                                    de a csapat összefog, hogy megállítsák őt és a rejtélyes bűnözőt.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-6 mb-3">
-                <div class="card bg-dark text-white">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="./image/kicsiavatar.png" class="img-fluid rounded-start" alt="Avatar small poster">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Avatar: A víz útja</h5>
-                                <p class="card-text">
-                                    Jake Sully és családja új kihívásokkal néznek szembe, miközben egy vízi klánnal egyesülve védik Pandorát a fenyegető emberi inváziótól.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-6 mb-3">
-                <div class="card bg-dark text-white">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="./image/kicsisonic2.png" class="img-fluid rounded-start" alt="Sonic 2 small poster">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Sonic 2</h5>
-                                <p class="card-text">
-                                    Sonic és Tails összefognak, hogy megállítsák Robotnikot és Knuckles-t, miközben a világ megmentéséért harcolnak egy misztikus smaragdért.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
+  </div>
 </div>
+
+<div class="container mt-5">
+  <div class="card mb-3" style="max-width: 600px; border: solid 2px black;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="./image/kicsifaf.png" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 navbar">
+        <div class="card-body">
+          <h5 class="card-title">MovieWorld</h5>
+          <p class="card-text">
+            Üdvözlünk a MovieWorld weboldalán! Itt megtalálod a legfrissebb filmek bemutatóit, híreket és
+            programajánlókat. Böngéssz a filmek között, olvass kritikákat, és tudd meg, melyik filmek érhetők el a
+            nálunk! Célunk, hogy mindenki számára élvezetes moziélményeket biztosítsunk – legyen szó egy
+            szórakoztató estéről, vagy egy gondolatébresztő filmmaratonról.
+            várnak!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3 float-sm-end" style="max-width: 600px; border: solid 2px black;">
+    <div class="row g-0">
+      <div class="col-md-8 navbar">
+        <div class="card-body">
+          <h5 class="card-title">Oldalunk</h5>
+          <p class="card-text">
+            Az oldalunk 2025. január 20-án jött létre azzal a céllal, hogy a legfrissebb, legjobb filmeket a lehető legélvezetesebb módon tudják nézni látogatóink.
+            Ezen az oldalon fogjuk bemutatni, hogy milyen filmek várhatóak a közeljövőben, hogy mikor melyik filmet vetítjük, hogy mindenről informálva legyetek!
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="./image/kicsisonic2.png" class="img-fluid rounded-end" alt="...">
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn navbar" style="border: solid 1px black;">Tovább a filmekre -></button>
