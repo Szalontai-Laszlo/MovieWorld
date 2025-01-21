@@ -57,7 +57,7 @@
       .state('register', {
 				url: '/register',
         parent: 'root',
-        controller: 'register',
+        //controller: 'register',
 				templateUrl: './html/register.html'
 			});
     
