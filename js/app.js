@@ -47,18 +47,18 @@
 				templateUrl: './html/page2.html'
 			})
 
-      .state('login', {
-				url: '/login',
-        parent: 'root',
-				templateUrl: './html/login.html',
-        controller: 'loginController'
-			})
-
       .state('register', {
 				url: '/register',
         parent: 'root',
-        //controller: 'register',
-				templateUrl: './html/register.html'
+        controller: 'registerController',
+				templateUrl: './html/register.html',
+			})
+
+      .state('login', {
+				url: '/login',
+        parent: 'root',
+        controller: 'loginController',
+				templateUrl: './html/login.html'
 			});
     
       $urlRouterProvider.otherwise('/home');
@@ -66,6 +66,12 @@
   ])
 
   app.controller('loginController', function($scope) {
+    $scope.login = function() {
+      console.log($scope.email + "\n" + $scope.password)
+    }
+  })
+
+  app.controller('registerController', function($scope) {
     $scope.login = function() {
       console.log($scope.password + "\n" + $scope.email)
     }
