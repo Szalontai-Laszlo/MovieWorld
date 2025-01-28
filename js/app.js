@@ -41,10 +41,10 @@
 				templateUrl: './html/page1.html'
 			})
 
-      .state('page2', {
-				url: '/page2',
+      .state('movies', {
+				url: '/movies',
         parent: 'root',
-				templateUrl: './html/page2.html'
+				templateUrl: './html/movies.html'
 			})
 
       .state('register', {

@@ -32,9 +32,6 @@
 /* Fehér szöveg a címkéken és h3-on */
 .form-label,
 .form-check-label,
-h3 {
-    color: white !important;
-}
 
 /* Regisztráció gomb stílusa */
 .register-button {
