@@ -53,13 +53,11 @@
                         A Csodálatos Pókember 2012-ben bemutatott amerikai film, amely Marc
                         Webb rendezésében az eredeti Marvel képregény alapján készült.
                     </p>
-                    <p class="card-text long-desc d-none">
-                        Bővebb leírás: Peter Parker, egy tinédzser, felfedezi, hogy
-                        szülei múltja sötét titkokat rejt. Miután egy genetikailag módosított pók megcsípi, emberfeletti
-                        képességekre tesz szert. Gwen Stacy iránti szerelme és Dr. Curt Connors, azaz a Gyík elleni harc
-                        központi eleme a történetnek, ahol Peter igazi hőssé válik.
-                    </p>
-                    <button class="btn btn-outline-light btn-sm toggle-btn mt-2">Többet >>></button>
+                    <button class="btn btn-outline-light btn-sm toggle-btn mt-2" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#cspokember">
+                            Többet >>>
+                    </button>
                 </div>
                 <div class="card-footer bg-dark text-center">
                     <button class="btn btn-dark bg-dark w-100">Jegy Foglalása</button>
@@ -158,7 +156,11 @@
                         legénybúcsújára. Egy vad éjszaka után másnap semmire sem emlékeznek, Doug pedig eltűnt. Különös
                         nyomok – egy tigris, egy csecsemő és Mike Tyson – vezetik őket az előző éjszaka eseményeinek
                         felgöngyölítésében, miközben próbálják időben megtalálni Dougot az esküvőre. </p>
-                    <button class="btn btn-outline-light btn-sm toggle-btn mt-2">Többet >>></button>
+                    <button class="btn btn-outline-light btn-sm toggle-btn mt-2" 
+                            data-toggle="modal" 
+                            data-target="#exampleModalCenter">
+                        Többet >>>
+                    </button>
                 </div>
                 <div class="card-footer bg-dark text-center">
                     <button class="btn btn-dark bg-dark w-100">Jegy Foglalása</button>
@@ -242,23 +244,28 @@
     </div>
 </div>
 
+
+
+  <!-- Pókember Modal -->
+  <div class="modal fade text-white" id="cspokember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content orange-pink">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">A Csodálatos Pókember</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Peter Parker, egy tinédzser, felfedezi, hogy
+            szülei múltja sötét titkokat rejt. Miután egy genetikailag módosított pók megcsípi, emberfeletti
+            képességekre tesz szert. Gwen Stacy iránti szerelme és Dr. Curt Connors, azaz a Gyík elleni harc
+            központi eleme a történetnek, ahol Peter igazi hőssé válik.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <script>
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const cardBody = button.closest('.card').querySelector('.card-body');
-            const shortDesc = cardBody.querySelector('.short-desc');
-            const longDesc = cardBody.querySelector('.long-desc');
-            if (longDesc.classList.contains('d-none')) {
-                // Hosszabb leírás
-                longDesc.classList.remove('d-none');
-                shortDesc.classList.add('d-none');
-                button.innerText = 'Vissza <<';
-            } else {
-                // Rövidebb leírás
-                longDesc.classList.add('d-none');
-                shortDesc.classList.remove('d-none');
-                button.innerText = 'Többet >>>';
-            }
-        });
-    });
+    
 </script>
