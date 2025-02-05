@@ -14,6 +14,7 @@
 								<input type="text"
 								       class="form-control form-control-lg"
 									   id="last_name" 
+									   ng_model="last_name" 
 									   placeholder="Lakatos"
 									   spellcheck="false" 
 									   autocomplete="off" 
@@ -28,6 +29,7 @@
 								<input type="text"
 								       class="form-control form-control-lg"
 									   id="first_name" 
+									   ng_model="first_name" 
 									   placeholder="Dzsenifer"
 									   spellcheck="false" 
 									   autocomplete="off" 
@@ -42,6 +44,7 @@
 								<input type="date"
 								       class="form-control form-control-lg"
 									   id="born" 
+									   ng_model="born" 
 									   spellcheck="false" 
 									   autocomplete="off" 
 									   required 
@@ -87,6 +90,14 @@
 									   ng-disable-space
 									   ng-clear-icon />
 								<label class="form-label" for="register-password">Jelszó</label> <br>
+								<input id="login-showPassword"
+							         class="form-check-input"
+							         type="checkbox"
+                       				 ng-model="showPassword">
+						    	<label for="login-showPassword"
+						    	     class="form-check-label ms-1">
+						    	Jelszó megjelenítése
+						    </label>
 							</div>
 
 							<!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">elfelejtetted a jelszavad?</a></p> -->
