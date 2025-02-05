@@ -29,10 +29,6 @@
     background-color: #f0f0f0;
 }
 
-/* Fehér szöveg a címkéken és h3-on */
-.form-label,
-.form-check-label,
-
 /* Regisztráció gomb stílusa */
 .register-button {
     position: fixed;
