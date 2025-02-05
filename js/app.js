@@ -68,12 +68,14 @@
   app.controller('loginController', function($scope) {
     $scope.login = function() {
       console.log($scope.email + "\n" + $scope.password)
+      $scope.showPassword = false;
     }
   })
 
   app.controller('registerController', function($scope) {
-    $scope.login = function() {
-      console.log($scope.password + "\n" + $scope.email)
+    $scope.register = function() {
+      console.log($scope.last_name + "\n" + $scope.first_name + "\n" + $scope.born + "\n" + $scope.email + "\n" + $scope.password)
+      $scope.showPassword = false;
     }
   })
 	
