@@ -44,6 +44,7 @@
       .state('movies', {
 				url: '/movies',
         parent: 'root',
+        controller: "moviesController",
 				templateUrl: './html/movies.html'
 			})
 
@@ -70,13 +71,18 @@
       console.log($scope.email + "\n" + $scope.password)
       $scope.showPassword = false;
     }
-  })
+  }),
 
   app.controller('registerController', function($scope) {
     $scope.register = function() {
       console.log($scope.last_name + "\n" + $scope.first_name + "\n" + $scope.born + "\n" + $scope.email + "\n" + $scope.password)
       $scope.showPassword = false;
     }
+  }),
+
+  app.controller('moviesController', function($scope) {
+      $scope.items = ['Első elem', 'Második elem', 'Harmadik elem', 'Negyedik elem'];
+      $scope.title = ['A Csodálatos Pókember','','','',''];
   })
 	
 })(window, angular);

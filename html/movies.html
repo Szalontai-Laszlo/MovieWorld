@@ -1,4 +1,4 @@
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="font-family: serif;">
+<div id="carouselExampleAutoplaying" ng-contoller="moviesController" class="carousel slide" data-bs-ride="carousel" style="font-family: serif;" >
     <div class="carousel-inner">
         <div class="carousel-item active">
             <img src="./image/halalosiramban.png" class="d-block w-100" alt="...">
@@ -55,7 +55,7 @@
                     </p>
                     <button class="btn btn-outline-light btn-sm toggle-btn mt-2" 
                             data-bs-toggle="modal" 
-                            data-bs-target="#cspokember">
+                            data-bs-target="#modals">
                             Többet >>>
                     </button>
                 </div>
@@ -247,25 +247,19 @@
 
 
   <!-- Pókember Modal -->
-  <div class="modal fade text-white" id="cspokember" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade text-white" id="modals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content orange-pink">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">A Csodálatos Pókember</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content orange-pink">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel" ng-repeat="title in titles">{{title}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p ng-repeat="item in items">{{item}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+            </div>
         </div>
-        <div class="modal-body">
-            Peter Parker, egy tinédzser, felfedezi, hogy
-            szülei múltja sötét titkokat rejt. Miután egy genetikailag módosított pók megcsípi, emberfeletti
-            képességekre tesz szert. Gwen Stacy iránti szerelme és Dr. Curt Connors, azaz a Gyík elleni harc
-            központi eleme a történetnek, ahol Peter igazi hőssé válik.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
-        </div>
-      </div>
     </div>
-  </div>
-<script>
-    
-</script>
+</div>
