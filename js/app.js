@@ -66,17 +66,27 @@
     }
   ])
 
-  app.controller('loginController', function($scope) {
+  app.controller('loginController', function($scope,http) {
     $scope.login = function() {
       console.log($scope.email + "\n" + $scope.password)
       $scope.showPassword = false;
     }
   }),
 
-  app.controller('registerController', function($scope) {
+  app.controller('registerController', function($scope, http) {
     $scope.register = function() {
-      console.log($scope.last_name + "\n" + $scope.first_name + "\n" + $scope.born + "\n" + $scope.email + "\n" + $scope.password)
-      $scope.showPassword = false;
+      console.log($scope.last_name + "\n" + $scope.first_name +  "\n" + $scope.email + "\n" + $scope.password)
+      http.request({
+        url:"./php/mw.php"
+      })
+      .then(response => {
+        response.last_name = $scope.last_name;
+        response.first_name = $scope.first_name;
+        response.email = $scope.email;
+        response.password = $scope.password;
+        $scope.$applyAsync();
+      })
+      .catch(e => console.log(e))
     }
   }),
 
