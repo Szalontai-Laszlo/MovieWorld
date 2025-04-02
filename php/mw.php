@@ -2,7 +2,7 @@
 
 require_once("../../common/php/environment.php");
 
-$db = new Database('movieworld');
+include('database_connect.php');
 
 $form_data = file_get_contents("php://input");
 
