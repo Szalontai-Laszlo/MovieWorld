@@ -31,9 +31,8 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `vezeteknev` varchar(100) NOT NULL,
   `keresztnev` varchar(100) NOT NULL,
-  `szuletes` date NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `jelszo` varchar(50) NOT NULL
+  `email` varchar(250) NOT NULL,
+  `jelszo` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
