@@ -75,7 +75,7 @@
 
   app.controller('registerController', function($scope, http) {
     $scope.register = function() {
-      console.log($scope.last_name + "\n" + $scope.first_name +  "\n" + $scope.email + "\n" + $scope.password)
+      console.log($scope.vezetekNev + "\n" + $scope.keresztNev +  "\n" + $scope.email + "\n" + $scope.jelszo)
       http.request({
         url:"./php/mw.php"
       })
@@ -90,9 +90,13 @@
     }
   }),
 
-  app.controller('moviesController', function($scope) {
-      $scope.items = ['Első elem', 'Második elem', 'Harmadik elem', 'Negyedik elem'];
-      $scope.title = ['A Csodálatos Pókember','','','',''];
+  app.controller('moviesController', function($scope,http) {
+    $scope.movies = function() {
+      http.request({
+        url:"./php/movies.php"
+      })
+    }
+
   })
 	
 })(window, angular);

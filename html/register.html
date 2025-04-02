@@ -14,7 +14,7 @@
 								<input type="text"
 								       class="form-control form-control-lg"
 									   id="last_name" 
-									   ng_model="last_name" 
+									   ng_model="vezetekNev" 
 									   placeholder="Lakatos"
 									   spellcheck="false" 
 									   autocomplete="off" 
@@ -30,7 +30,7 @@
 								<input type="text"
 								       class="form-control form-control-lg"
 									   id="first_name" 
-									   ng_model="first_name" 
+									   ng_model="keresztNev" 
 									   placeholder="Dzsenifer"
 									   spellcheck="false" 
 									   autocomplete="off" 
@@ -74,7 +74,7 @@
 									   required minlength="6" 
 									   maxlength="20"
 									   ng-init="password=null" 
-									   ng-model="password"
+									   ng-model="jelszo"
 									   ng-pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/" 
 									   ng-disable-space
 									   ng-clear-icon
