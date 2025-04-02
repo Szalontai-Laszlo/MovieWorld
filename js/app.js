@@ -91,8 +91,8 @@
   }),
 
   app.controller('moviesController', function($scope) {
-      $scope.items = ['Első elem', 'Második elem', 'Harmadik elem', 'Negyedik elem'];
-      $scope.title = ['A Csodálatos Pókember','','','',''];
+      $scope.cim = ["Pokember", "Kutya", "Macska"]
+      $scope.rovidleiras = ["Pokember", "Kutya", "Macska"]
   })
 	
 })(window, angular);

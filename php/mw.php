@@ -8,56 +8,22 @@ $form_data = file_get_contents("php://input");
 
 $args = json_decode($form_data);
 
-$error = [];
-$data = [];
+$stmt = $connection->prepare("INSERT INTO `users`(`first_name`, `last_name`, `email`, `password`) 
+VALUES (:first_name, :last_name, :email, :password)");
 
-if(empty($form_data->first_name)) {
-    $error[] = 'First name is required';
-} else {
-    $data[':first_name'] = $form_data->first_name;
-}
+//A megadott paramétereket be helyettesíti a js által megadott értékekből
+$stmt->bindParam(':first_name', $args['first_name']);
+$stmt->bindParam(':last_name', $args['last_name']);
+$stmt->bindParam(':email', $args['email']);
+$stmt->bindParam(':password', $args['password']);
 
-if(empty($form_data->last_name)) {
-    $error[] = 'Last name is required';
-} else {
-    $data[':last_name'] = $form_data->last_name;
-}
-
-if(empty($form_data->email)) {
-    $error[] = 'Email is required';
-} else {
-    if(!filter_var($form_data->email, FILTER_VALIDATE_EMAIL)) {
-        $error[] = 'Invalid Email Format';
-    } else {
-        $data[':email'] = $form_data->email;
-    }
-}
-
-if(empty($form_data->password)) {
-    $error[] = 'Password is required';
-} else {
-    $data[':password'] = password_hash($form_data->password, PASSWORD_DEFAULT);
-}
-
-if(empty($error)) {
-    $query = "
-    INSERT INTO `users`(`first_name`, `last_name`, `email`, `password`) 
-    VALUES (:first_name, :last_name, :email, :password)
-    ";
+//Ha egy megadott adat sem üres akkor tovább fog futni
+if (!empty($args['first_name']) && !empty($args['last_name']) && !empty($args['email']) && !empty($args['password'])) {
+        $stmt->execute();
+        Util::setResponse(["Sikeres regisztráció!",true]);
     
-    $statement = $db->prepare($query);
-    if($statement->execute($data)) {
-        $message = 'A regisztráció sikeres!';
-    }
-} else {
-    $validation_error = implode(", ", $error);
 }
-
-$output = array(
-    'error'  => $validation_error ?? '',
-    'message' => $message ?? ''
-);
-
-echo json_encode($output);
-
+//Ha hiányzik valami akkor ki írja
+else 
+    Util::setResponse(["Hiányzó adatok",false]);
 ?>
