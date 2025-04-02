@@ -75,7 +75,7 @@
 
   app.controller('registerController', function($scope, http) {
     $scope.register = function() {
-      console.log($scope.last_name + "\n" + $scope.first_name +  "\n" + $scope.email + "\n" + $scope.password)
+      console.log($scope.vezetekNev + "\n" + $scope.keresztNev +  "\n" + $scope.email + "\n" + $scope.jelszo)
       http.request({
         url:"./php/mw.php"
       })
@@ -90,9 +90,19 @@
     }
   }),
 
+<<<<<<< HEAD
   app.controller('moviesController', function($scope) {
       $scope.cim = ["Pokember", "Kutya", "Macska"]
       $scope.rovidleiras = ["Pokember", "Kutya", "Macska"]
+=======
+  app.controller('moviesController', function($scope,http) {
+    $scope.movies = function() {
+      http.request({
+        url:"./php/movies.php"
+      })
+    }
+
+>>>>>>> e1d775520f86b0ef2a19a900bd63e8e24191aa8e
   })
 	
 })(window, angular);
